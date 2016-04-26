@@ -1,5 +1,9 @@
 # atool-pack
 
+[![NPM version](https://img.shields.io/npm/v/atool-pack.svg?style=flat)](https://npmjs.org/package/atool-pack)
+
+----
+
 "npm pack + extract" tool
 
 ### cli:

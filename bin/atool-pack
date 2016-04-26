@@ -6,6 +6,6 @@ program
   .version(require('../package').version, '-v, --version')
   .parse(process.argv);
 
-require('../lib/index')(process.argv[2], process.argv[3]).catch(err => {
+require('../lib/index')(process.argv[2], process.argv[3]).catch(function(err) {
   console.error('pack error:\n\n', err);
 });
