@@ -1,6 +1,6 @@
 {
   "name": "atool-pack",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "npm pack and extract",
   "homepage": "http://github.com/ant-tool/atool-pack",
   "author": "yaya <yaya@uloveit.com.cn>",
