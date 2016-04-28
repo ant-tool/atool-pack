@@ -11,4 +11,8 @@ for (let i = 0; i < array.length; i++) {
   }
 }
 
+if (process.platform === "win32") {
+  npm+='.cmd';
+}
+
 export default npm;
