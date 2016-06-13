@@ -1,6 +1,6 @@
 {
   "name": "atool-pack",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "npm pack and extract",
   "homepage": "http://github.com/ant-tool/atool-pack",
   "author": "yaya <yaya@uloveit.com.cn>",
@@ -22,7 +22,7 @@
     "os-tmpdir": "^1.0.1",
     "rimraf": "^2.5.2",
     "shelljs": "^0.6.0",
-    "tar.gz": "^1.0.3"
+    "tar.gz": "1.0.2"
   },
   "devDependencies": {
     "babel-cli": "~6.6.4",
