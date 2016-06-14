@@ -3,8 +3,10 @@ import { join } from 'path';
 import rimraf from 'rimraf';
 import { mkdir } from 'shelljs';
 import { assert } from 'chai';
+import { readFileSync } from 'fs';
 
-describe('atool-pack', () => {
+describe('atool-pack', function() {
+  this.timeout(0);
 
   const dir = join(__dirname, 'test');
   before(() => {
@@ -16,9 +18,16 @@ describe('atool-pack', () => {
   });
 
   it('pack success' , function(done) {
+
+    this.timeout(0);
     pack('rcf', dir).then(() => {
-      done();
-    });
+      const content = readFileSync(join(dir, 'lib/index.js'));
+      if (content) {
+        done();
+      } else {
+        done('err')
+      }
+    }).catch(err => console.log(err));
   });
 
   it('pack error' , function(done) {
@@ -26,14 +35,6 @@ describe('atool-pack', () => {
       if (err) {
         done();
       }
-    });
-  });
-
-  it('pack file' , function(done) {
-    pack('rcf', dir).then(() => {
-      const pkg = require(join(dir, 'package.json'));
-      assert(pkg.name === 'rcf')
-      done();
     });
   });
 
